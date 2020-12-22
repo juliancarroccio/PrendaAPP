@@ -1,0 +1,160 @@
+info:
+  description: scanner Prenda
+  version: 1.0.0
+  title: Scanner Prenda
+  # put the contact info for your development or API team
+  contact:
+    email: juliancarroccio@gmail.com
+
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+# tags are used for organizing operations
+tags:
+- name: Consulta APP Scanner
+  description: Endpoint para scanner empleado
+- name: CRUD Administrador
+  description: Endpoint para Administrador
+
+paths:
+  /prenda:
+    get:
+      tags:
+      - Consulta Para APP Empleado
+      - CRUD Para ABM Administrador
+      summary: obtiene prenda/s
+      operationId: ""
+      description: GET que recibe todas las prendas existentes en el inventario si no se envia parámetros o familia de productos si se envia codgo de barras por parámetros
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        name: codigoBarras
+        description: codigo de barras de producto de familia a obtener
+        required: false
+        type: integer
+      responses:
+        200:
+          description: prenda encontrada
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/prenda'
+        400:
+          description: sin prendas en BD o codigo de barras inexistente
+    post:
+      tags:
+        - CRUD Para ABM Administrador
+      summary: agrega prenda
+      operationId: ""
+      description: agrega una prenda a Inventario
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: prenda
+        description: prenda a agregar
+        schema:
+          $ref: '#/definitions/prenda'
+      responses:
+        201:
+          description: prenda creada
+        400:
+          description: prenda inválida
+        409:
+          description: prenda ya existe en BD
+    put:
+      tags:
+        - CRUD Para ABM Administrador
+      summary: edita prenda
+      operationId: ""
+      description: edita una prenda del inventario
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: prenda
+        description: datos de prenda
+        schema:
+          $ref: '#/definitions/prenda'
+      - in: query
+        name: codigoBarras
+        description: codigo de barras de producto a editar
+        required: true
+        type: integer
+      responses:
+        201:
+          description: prenda editada
+        400:
+          description: datos de prenda a editar inválidos
+        409:
+          description: prenda no existe en BD
+    delete:
+      tags:
+        - CRUD Para ABM Administrador
+      summary: elimina prenda
+      operationId: ""
+      description: elimina una prenda del inventario
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        name: codigoBarras
+        description: codigo de barras de prenda a eliminar
+        required: true
+        type: integer
+      responses:
+        201:
+          description: prenda eliminada
+        400:
+          description: prenda no existe en BD
+ 
+definitions:
+  prenda:
+    type: object
+    required:
+    - id_marca
+    - id_proveedor
+    - id_industria
+    - codigoBarra
+    - descripcion_producto
+    - precio
+    - stock
+    - iva
+    properties:
+      id_marca:
+        type: integer
+        example: 12
+      id_proveedor:
+        type: integer
+        example: 17
+      id_industria:
+        type: integer
+        example: 20
+      codigoBarra:
+        type: integer
+        example: 11111111111
+      descripcion_producto:
+        type: string
+        example: Remera Roja
+      precio:
+        type: integer
+        example: 205
+      stock:
+       type: integer
+       example: 20
+      iva:
+        type: integer
+        example: 21
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /juliancarroccio4/crudPrendas/1.0.0
+schemes:
+ - https

@@ -1,0 +1,8 @@
+La Aplicación deberá tener una sola funcionalidad:
+- Escaneará un codigo de barras y mostrará el stock disponible del producto seleccionado o de los productos de la misma Familia
+El objetivo de este caso es que, cuando un cliente se acerca a un vendedor con un prenda, este pueda obtener el stock del producto, asi también como los productos con descripción similar
+Al obtener estos datos, el Vendedor puede ofrecer, en caso que no existan, productos similares.
+Para dicho propósito se va a crear una API CRUD, para futuros ingresos de datos en BD propuesta, un una consulta especial, que realizará dicha búsqueda.
+El servicio será consumido por un Front que deberá mostrarlo, asi también poder filtrarlos por Marca, Color y Talle.
+
+Familia: Prendas que comparten Descripción, Indiferente a la Marca, Color y Talle
