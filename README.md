@@ -4,7 +4,7 @@ APP para Andriod que escanea codigo de barra y muestra prendas en inventario o s
 
 # Tecnologías a usar:
 - DART con Flutter para Frontend
-- Phyton librería Flask para API CRUD
+- Phyton librería Flask para API CRUD y Libreria SQLAlchemy como ORM
 - MySQL como Base de Datos
 
 # Entornos o IDES
@@ -21,5 +21,9 @@ APP para Andriod que escanea codigo de barra y muestra prendas en inventario o s
 (completar)
 
 # To Do List
-(completar)
+- Lógica GET por familia
+- Manejo Errores
+- Pruebas Unitarias
+- Refactor Código(models fuera)
+
 
