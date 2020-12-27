@@ -1,5 +1,5 @@
 # PrendaAPP
-APP para Andriod que escanea codigo de barra y muestra prendas en inventario o similares
+APP para Android que escanea código de barra y muestra prendas en inventario o similares
 
 
 # Tecnologías a usar:
@@ -24,6 +24,6 @@ APP para Andriod que escanea codigo de barra y muestra prendas en inventario o s
 - Lógica GET por familia
 - Manejo Errores
 - Pruebas Unitarias
-- Refactor Código(models fuera)
+- Refactor Código (models fuera)
 
 
