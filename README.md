@@ -24,6 +24,3 @@ APP para Android que escanea codigo de barra y muestra prendas en inventario o s
 - Lógica GET por familia
 - Manejo Errores
 - Pruebas Unitarias
-- Refactor Código (models fuera)
-
-
