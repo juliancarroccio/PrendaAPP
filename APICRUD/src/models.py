@@ -127,11 +127,18 @@ class Familia(db.Model):
 
 db.create_all()
 
+class ErrorSchema(ma.Schema):
+    class Meta:
+        fields = (
+        'error_code', 'message')
+
 class ProductoSchema(ma.Schema):
     class Meta:
         fields = (
-        'codigoBarra', 'descripcion_producto', 'id_color', 'id_familia', 'id_industria', 'id_marca', 'id_proveedor',
+        'codigoBarra', 'descripcion_producto', 'descripcion_color', 'id_familia', 'id_industria', 'id_marca', 'id_proveedor',
         'id_talle', 'iva', 'precio', 'stock')
 
 producto_schema = ProductoSchema()
 productos_schema = ProductoSchema(many=True)
+error_schema = ErrorSchema()
+
