@@ -21,5 +21,5 @@ APP para Android que escanea codigo de barra y muestra prendas en inventario o s
 (completar)
 
 # To Do List
-- refactor methods y otros CRUD's (producto, marca, proveedor, industria, color, talle y familia)
+- otros CRUD's (proveedor, industria, color, talle y familia)
 - Pruebas Unitarias
