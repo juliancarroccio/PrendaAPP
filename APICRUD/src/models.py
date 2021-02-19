@@ -138,7 +138,14 @@ class ProductoSchema(ma.Schema):
         'codigoBarra', 'descripcion_producto', 'descripcion_color', 'id_familia', 'id_industria', 'id_marca', 'id_proveedor',
         'id_talle', 'iva', 'precio', 'stock')
 
+class MarcaSchema(ma.Schema):
+    class Meta:
+        fields = (
+        'id_marca', 'descripcion_marca')
+
 producto_schema = ProductoSchema()
 productos_schema = ProductoSchema(many=True)
+marca_schema = MarcaSchema()
+marcas_schema = MarcaSchema(many=True)
 error_schema = ErrorSchema()
 

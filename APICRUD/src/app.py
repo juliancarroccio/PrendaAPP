@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 import models
-import methods
+from methods import prendaController, marcaController
 
 
 # Load enviorment variables
@@ -17,4 +17,4 @@ if __name__ == "__main__":
     app.run(host=API_HOST, port=API_PORT, debug=True)
 
 #To quit the unused import warning
-__all__ = ['methods']
+__all__ = ['prendaController', 'marcaController']
