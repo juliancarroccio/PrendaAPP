@@ -1,17 +1,13 @@
 from flask import jsonify
 from flask import  request
-from sqlalchemy import text
 import models
 
 
 #Get models variables using in API
 app = models.app
 db = models.db
-producto_schema = models.producto_schema
-productos_schema = models.productos_schema
 marca_schema = models.marca_schema
 marcas_schema = models.marcas_schema
-error_schema = models.error_schema
 
 
 @app.route('/marca', methods=['POST'])
@@ -33,8 +29,8 @@ def get_brand():
 
 @app.route('/marca/<id>', methods=['GET'])
 def get_brands(id):
-  task = models.Marca.query.get(id)
-  return marca_schema.jsonify(task)
+  marca = models.Marca.query.get(id)
+  return marca_schema.jsonify(marca)
 
 @app.route('/marca/<id>', methods=['PUT'])
 def update_task(id):

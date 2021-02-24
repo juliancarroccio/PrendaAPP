@@ -143,9 +143,16 @@ class MarcaSchema(ma.Schema):
         fields = (
         'id_marca', 'descripcion_marca')
 
+class ProveedorSchema(ma.Schema):
+    class Meta:
+        fields = (
+        'id_proveedor', 'descripcion_proveedor')
+
 producto_schema = ProductoSchema()
 productos_schema = ProductoSchema(many=True)
 marca_schema = MarcaSchema()
 marcas_schema = MarcaSchema(many=True)
+proveedor_schema = ProveedorSchema()
+proveedores_schema = ProveedorSchema(many=True)
 error_schema = ErrorSchema()
 
