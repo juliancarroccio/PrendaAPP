@@ -2,8 +2,13 @@
 APP para Android que escanea codigo de barra y muestra prendas en inventario o similares
 
 # Backend:
+- BD propuesta en este repo
 - CRUD de prendas con lógica de búsqueda incluida, la lógica a realizar es: busca las prendas de la misma familia cuyo stock sea distinto de cero. La familia de una prenda es una característica que lo define para poder generar ventas cruzadas(Ej: pantalon chupín escaneado presentará las prendas con stock existentes de esa marca con distinto color o de otras marcas).
-- CRUD de todos las las tablas de la BD propuesta(marca,proveedor, industria, color, talle y familia) 
+- CRUD de todos las las tablas de la BD propuesta(marca,proveedor, industria, color, talle y familia)   
+
+# Frontend   
+- Portal en Django desarollado en repo portal_CRUD_prenda
+- APP desarrollada en repo APP_Prenda_Scanner
 
 # Endpoints:
 - Prenda:
@@ -121,8 +126,19 @@ APP para Android que escanea codigo de barra y muestra prendas en inventario o s
 # Librerías Externas
 - Zbar y Zxing
 
-# Despliegue
+# Despliegue General
+###BD(Mysql)
 (completar)
+
+###Flask API
+(completar)
+
+###Portal ABM en Django
+(completar)
+
+###API
+(Completar)
+
 
 # To Do List
 - otros CRUD's (industria, color, talle y familia)
