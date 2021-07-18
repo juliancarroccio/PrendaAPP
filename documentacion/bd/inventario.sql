@@ -107,7 +107,7 @@ CREATE TABLE `producto` (
   `id_color` int(11) DEFAULT NULL,
   `id_talle` int(11) DEFAULT NULL,
   `id_familia` int(11) DEFAULT NULL,
-  `codigoBarra` int(11) DEFAULT NULL,
+  `codigoBarra` bigint(20) DEFAULT NULL,
   `descripcion_producto` varchar(1000) DEFAULT NULL,
   `precio` double NOT NULL,
   `stock` int(11) NOT NULL,
